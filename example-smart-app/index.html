@@ -88,7 +88,7 @@
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
           drawVisualization(p);
-          $.ajax({
+          jQuery.ajax({
             method: "GET",
             url: "https://quotes.rest/qod",
             dataType: "json",
