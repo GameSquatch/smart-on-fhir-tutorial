@@ -88,6 +88,12 @@
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
           drawVisualization(p);
+          $.ajax({
+            method: "GET",
+            url: "https://quotes.rest/qod",
+            dataType: "json",
+            success: (data) => console.log(`data received - quote: "${data.contents.quotes[0].quote}"`);
+          });
         },
 
         //Display 'Failed to call FHIR Service' if extractData failed
